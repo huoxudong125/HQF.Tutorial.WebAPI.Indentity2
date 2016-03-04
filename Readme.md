@@ -12,3 +12,5 @@ Install-Package Microsoft.Owin.Security.OAuth -Version 3.0.0
 Install-Package Microsoft.Owin.Cors -Version 3.0.0
 
 ```
+
+[ASP.NET Identity 2.1 Accounts Confirmation, and Password Policy Configuration ¨C Part 2](http://bitoftech.net/2015/02/03/asp-net-identity-2-accounts-confirmation-password-user-policy-configuration/)
