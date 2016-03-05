@@ -55,3 +55,36 @@ The `StartUp` class is nor fired.
  - [Simple OAuth Server: Implementing a Simple OAuth Server with Katana OAuth Authorization Server Components (Part 1)](http://www.tugberkugurlu.com/archive/simple-oauth-server-implementing-a-simple-oauth-server-with-katana-oauth-authorization-server-components-part-1)  
  - [Here's a great resource on OWIN Startup Class Detection.](http://www.asp.net/aspnet/overview/owin-and-katana/owin-startup-class-detection)
  
+##Part 4
+[ASP.NET Identity 2.1 Roles Based Authorization with ASP.NET Web API Part 4](http://bitoftech.net/2015/03/11/asp-net-identity-2-1-roles-based-authorization-authentication-asp-net-web-api/)
+
+``` c
+
+// Configure the db context and user manager to use a single instance per request
+            app.CreatePerOwinContext(ApplicationDbContext.Create);
+            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
+
+```
+
+
+Decode Json Token using [JWT.io ](http://jwt.io/)  you will notice that this token contains claim of type â€œRoleâ€?as the below:
+```
+{
+  "nameid": "29e21f3d-08e0-49b5-b523-3d68cf623fd5",
+  "unique_name": "SuperPowerUser",
+  "http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider": "ASP.NET Identity",
+  "AspNet.Identity.SecurityStamp": "832d5f6b-e71c-4c31-9fde-07fe92f5ddfd",
+  "role": [
+    "Admin",
+    "SuperAdmin"
+  ],
+  "Phone": "123456782",
+  "Gender": "Male",
+  "iss": "http://localhost:59822",
+  "aud": "414e1927a3884f68abc79f7283837fd1",
+  "exp": 1426115380,
+  "nbf": 1426028980
+}
+
+```
