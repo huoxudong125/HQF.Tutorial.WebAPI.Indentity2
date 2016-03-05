@@ -1,5 +1,6 @@
 #HQF.Tutorial.WebAPI.Indentity2
 
+## Part1
 [Configure ASP.NET Identity with ASP.NET Web API (Accounts Management)](http://bitoftech.net/2015/01/21/asp-net-identity-2-with-asp-net-web-api-2-accounts-management/)
 
 
@@ -13,4 +14,15 @@ Install-Package Microsoft.Owin.Cors -Version 3.0.0
 
 ```
 
-[ASP.NET Identity 2.1 Accounts Confirmation, and Password Policy Configuration ¨C Part 2](http://bitoftech.net/2015/02/03/asp-net-identity-2-accounts-confirmation-password-user-policy-configuration/)
+## Part2
+[ASP.NET Identity 2.1 Accounts Confirmation, and Password Policy Configuration ¨C Part 2](http://bitoftech.net/2015/02/03/asp-net-identity-2-accounts-confirmation-password-user-policy-configuration/)  
+
+
+### Install Send Grid
+ Send Grid which is service provider for sending emails, but you can use any other service provider or your exchange change server to do this. 
+
+
+```
+install-package Sendgrid
+
+```
