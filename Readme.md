@@ -41,6 +41,11 @@ Install-package Thinktecture.IdentityModel.Core -Version 1.3.0
 There are two more packages that you need to install. One of them is `Microsoft.AspNet.Identity.Owin`. This package provides several useful extensions you will use while working with ASP.NET Identity on top of OWIN. The other one is `Microsoft.Owin.Host.SystemWeb` package which enables OWIN-based applications to run on IIS using the ASP.NET request pipeline.   
 >The packages we just installed (`Microsoft.AspNet.Identity.Owin`) also brought down some other packages as its dependencies. One of those dependency packages is `Microsoft.Owin.Security.OAuth` and this is the core package that includes the components to support any standard OAuth 2.0 authentication workflow. Just wanted to highlight this fact as this is an important part of the project.
 
+```
+Install-Package Microsoft.Owin.Security.Jwt -Version 3.0.0
+```
+
+
 ###Problem 1
 The `StartUp` class is nor fired. 
 - [OwinStartup not firing](https://stackoverflow.com/questions/20203982/owinstartup-not-firing)
