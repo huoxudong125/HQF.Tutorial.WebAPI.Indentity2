@@ -68,7 +68,7 @@ The `StartUp` class is nor fired.
 ```
 
 
-Decode Json Token using [JWT.io ](http://jwt.io/)  you will notice that this token contains claim of type “Role�?as the below:
+Decode Json Token using [JWT.io ](http://jwt.io/)  you will notice that this token contains claim of type “Role as the below:
 ```
 {
   "nameid": "29e21f3d-08e0-49b5-b523-3d68cf623fd5",
@@ -88,3 +88,22 @@ Decode Json Token using [JWT.io ](http://jwt.io/)  you will notice that this tok
 }
 
 ```
+
+
+## Part 5
+[ ASP.NET Web API Claims Authorization with ASP.NET Identity 2.1 C Part 5](http://bitoftech.net/2015/03/31/asp-net-web-api-claims-authorization-with-asp-net-identity-2-1/)  
+
+###What is a Claim?
+
+> Claim is a statement about the user makes about itself, it can be `user name`, `first name`, `last name`, `gender`, `phone`, the `roles` user assigned to, etc
+
+**Note:** It is not mandatory to use Claims for controlling user access, if you are happy with Roles Based Authorization and you have limited number of Roles then you can stick to this.
+
+
+
+
+# More Resources
+[ASP.NET Web Api: Understanding OWIN/Katana Authentication/Authorization](http://johnatten.com/2015/01/19/asp-net-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts/)
+
+
+

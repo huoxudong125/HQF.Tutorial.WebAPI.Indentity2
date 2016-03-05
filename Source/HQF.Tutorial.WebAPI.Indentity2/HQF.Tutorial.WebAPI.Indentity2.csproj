@@ -174,8 +174,12 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\ClaimsController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Infrastructure\ApplicationRoleManager.cs" />
+    <Compile Include="Infrastructure\ClaimsAuthorizationAttribute.cs" />
+    <Compile Include="Infrastructure\RolesFromClaims.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Infrastructure\ApplicationUser.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
@@ -185,11 +189,13 @@
       <DependentUpon>201603040133460_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ClaimBindingModel.cs" />
     <Compile Include="Models\RoleBindingModels.cs" />
     <Compile Include="Models\ModelFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\CustomJwtFormat.cs" />
     <Compile Include="Providers\CustomOAuthProvider.cs" />
+    <Compile Include="Providers\ExtendedClaimsProvider.cs" />
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Validators\MyCustomPasswordValidator.cs" />
