@@ -11,13 +11,22 @@ namespace HQF.Tutorial.WebAPI.Indentity2.Controllers
     {
 
         private ModelFactory _modelFactory;
-        private ApplicationUserManager _AppUserManager = null;
+        private readonly ApplicationUserManager _AppUserManager = null;
+        private readonly ApplicationRoleManager _appRoleManager;
 
         protected ApplicationUserManager AppUserManager
         {
             get
             {
                 return _AppUserManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+        }
+
+        protected ApplicationRoleManager AppRoleManager
+        {
+            get
+            {
+                return _appRoleManager ?? Request.GetOwinContext().GetUserManager<ApplicationRoleManager>();
             }
         }
 

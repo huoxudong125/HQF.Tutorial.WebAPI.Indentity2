@@ -39,13 +39,26 @@ namespace HQF.Tutorial.WebAPI.Indentity2.Migrations
                 UserName = "SuperPowerUser",
                 Email = "test@test.com",
                 EmailConfirmed = true,
-                FirstName = "qf",
+                FirstName = "quanfu",
                 LastName = "huo",
                 Level = 1,
                 JoinDate = DateTime.Now.AddYears(-3)
             };
 
             manager.Create(user, "test@123!");
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+            if (!roleManager.Roles.Any())
+            {
+                roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
+                roleManager.Create(new IdentityRole { Name = "Admin" });
+                roleManager.Create(new IdentityRole { Name = "User" });
+            }
+
+            var adminUser = manager.FindByName("SuperPowerUser");
+
+            manager.AddToRoles(adminUser.Id, new string[] { "SuperAdmin", "Admin" });
         }
 
        
